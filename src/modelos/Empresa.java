@@ -6,7 +6,12 @@ public class Empresa {
     private double canonArrendamiento;
     private int plazasEstacionamiento;
 
-    public Empresa() {}
+    public Empresa(String nit, String nombreEmpresa, double canonArrendamiento, int plazasEstacionamiento) {
+        this.nit = nit;
+        this.nombreEmpresa = nombreEmpresa;
+        this.canonArrendamiento = canonArrendamiento;
+        this.plazasEstacionamiento = plazasEstacionamiento;
+    }
 
     public String getNombreEmpresa() {
         return nombreEmpresa;
