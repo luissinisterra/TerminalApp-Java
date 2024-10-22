@@ -67,7 +67,7 @@ public class VistaCliente extends javax.swing.JFrame {
 
         btnDevoluciones.setText("Devoluciones");
 
-        btnReservar.setText("Reservar tequete");
+        btnReservar.setText("Reservar tiquete");
 
         btnCerrarSesion.setText("Cerrar sesión");
         btnCerrarSesion.addActionListener(new java.awt.event.ActionListener() {
@@ -137,13 +137,13 @@ public class VistaCliente extends javax.swing.JFrame {
     }//GEN-LAST:event_btnPuntosAcomuladosActionPerformed
 
     private void btnResumenInformacionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnResumenInformacionActionPerformed
-        VistaDevolucion vd = new VistaDevolucion(usuario);
+        VistaDevolucion vd = new VistaDevolucion(this.usuario);
         vd.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_btnResumenInformacionActionPerformed
 
     private void btnCerrarSesionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCerrarSesionActionPerformed
-        VistaLogin vl = new VistaLogin(controladorPrincipal);
+        VistaLogin vl = new VistaLogin(this.controladorPrincipal);
         vl.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_btnCerrarSesionActionPerformed
