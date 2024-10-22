@@ -1,9 +1,6 @@
 package controladores;
 
-import modelos.AdministradorTerminal;
-import modelos.Caseta;
-import modelos.Terminal;
-import modelos.Usuario;
+import modelos.*;
 import util.ListaUsuario;
 
 public class ControladorPrincipal {
@@ -46,6 +43,12 @@ public class ControladorPrincipal {
             }
         }
         return null;
+    }
+
+    public Cliente registro(String documento, String nombre,String contrasena) {
+        Cliente usuario = new Cliente(documento, nombre, contrasena);
+        this.usuarios.add(usuario);
+        return usuario;
     }
 
     public Caseta entregarCaseta(int fila, int columna){
