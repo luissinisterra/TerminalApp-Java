@@ -1,11 +1,10 @@
 package modelos;
 
-class Vehiculo {
+public class Bus {
     private String placa;
     private int cantidadPuestos;
-    private String empresaTransporte;
 
-    public Vehiculo(String placa, int cantidadPuestos) {
+    public Bus(String placa, int cantidadPuestos) {
         this.placa = placa;
         this.cantidadPuestos = cantidadPuestos;
     }
@@ -24,14 +23,6 @@ class Vehiculo {
 
     public void setCantidadPuestos(int cantidadPuestos) {
         this.cantidadPuestos = cantidadPuestos;
-    }
-
-    public String getEmpresaTransporte() {
-        return empresaTransporte;
-    }
-
-    public void setEmpresaTransporte(String empresaTransporte) {
-        this.empresaTransporte = empresaTransporte;
     }
 
 }

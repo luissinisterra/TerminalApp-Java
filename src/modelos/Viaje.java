@@ -6,7 +6,7 @@ public class Viaje {
     private String destino;
     private Date horaSalida;
     private Date horaLlegada;
-    private Vehiculo vehiculo;
+    private Bus bus;
 
     public String getOrigen() {
         return origen;
@@ -40,12 +40,12 @@ public class Viaje {
         this.horaLlegada = horaLlegada;
     }
 
-    public Vehiculo getVehiculo() {
-        return vehiculo;
+    public Bus getBus() {
+        return bus;
     }
 
-    public void setVehiculo(Vehiculo vehiculo) {
-        this.vehiculo = vehiculo;
+    public void setBus(Bus bus) {
+        this.bus = bus;
     }
 
 }

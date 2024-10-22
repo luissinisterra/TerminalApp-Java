@@ -46,6 +46,11 @@ public class VistaAdminFlota extends javax.swing.JFrame {
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder("Gestiones"));
 
         btnGestionBuses.setText("Gestión buses");
+        btnGestionBuses.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnGestionBusesActionPerformed(evt);
+            }
+        });
 
         btnGestionViajes.setText("Gestión viajes");
         btnGestionViajes.addActionListener(new java.awt.event.ActionListener() {
@@ -55,6 +60,11 @@ public class VistaAdminFlota extends javax.swing.JFrame {
         });
 
         btnVentaTiquetes.setText("Venta de tiquetes");
+        btnVentaTiquetes.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnVentaTiquetesActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -104,8 +114,22 @@ public class VistaAdminFlota extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnGestionViajesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGestionViajesActionPerformed
-        // TODO add your handling code here:
+        VistaGestionViajes vgv = new VistaGestionViajes(this.controladorPrincipal, this.usuario);
+        vgv.setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_btnGestionViajesActionPerformed
+
+    private void btnGestionBusesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGestionBusesActionPerformed
+        VistaGestionBuses vgb = new VistaGestionBuses(this.controladorPrincipal, this.usuario);
+        vgb.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_btnGestionBusesActionPerformed
+
+    private void btnVentaTiquetesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVentaTiquetesActionPerformed
+        VistaGestionVentas vv = new VistaGestionVentas(this.controladorPrincipal, this.usuario);
+        vv.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_btnVentaTiquetesActionPerformed
 
     /**
      * @param args the command line arguments
@@ -144,11 +168,9 @@ public class VistaAdminFlota extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnGestionBuses;
-    private javax.swing.JButton btnGestionCasetas;
     private javax.swing.JButton btnGestionViajes;
     private javax.swing.JButton btnVentaTiquetes;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JSeparator jSeparator1;
-    private javax.swing.JPanel panelGestionAdminTerminal;
     // End of variables declaration//GEN-END:variables
 }
