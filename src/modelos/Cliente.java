@@ -1,10 +1,10 @@
 package modelos;
 
-import util.ListaDevolucion;
+import util.Lista;
+import util.interfaces.ILista;
 
 public class Cliente extends Usuario {
     private int puntos;
-    private ListaDevolucion<Devolucion> devoluciones;
 
     public Cliente(String documento, String nombre, String contrasena) {
         super(documento, nombre, contrasena);
@@ -17,14 +17,6 @@ public class Cliente extends Usuario {
 
     public void setPuntos(int puntos) {
         this.puntos = puntos;
-    }
-
-    public ListaDevolucion<Devolucion> getDevoluciones() {
-        return devoluciones;
-    }
-
-    public void setDevoluciones(ListaDevolucion<Devolucion> devoluciones) {
-        this.devoluciones = devoluciones;
     }
 
     public void acumularPuntos(int monto) {

@@ -3,10 +3,12 @@ package modelos;
 public class Bus {
     private String placa;
     private int cantidadPuestos;
+    private boolean disponibilidad;
 
     public Bus(String placa, int cantidadPuestos) {
         this.placa = placa;
         this.cantidadPuestos = cantidadPuestos;
+        this.disponibilidad = true;
     }
 
     public String getPlaca() {
@@ -25,4 +27,11 @@ public class Bus {
         this.cantidadPuestos = cantidadPuestos;
     }
 
+    public boolean isDisponibilidad() {
+        return disponibilidad;
+    }
+
+    public void setDisponibilidad(boolean disponibilidad) {
+        this.disponibilidad = disponibilidad;
+    }
 }

@@ -1,4 +1,6 @@
 package modelos;
+import util.interfaces.ILista;
+
 import java.util.Date;
 
 public class Viaje {
@@ -7,6 +9,7 @@ public class Viaje {
     private Date horaSalida;
     private Date horaLlegada;
     private Bus bus;
+    private ILista<Cliente> clientesEnEspera;
 
     public String getOrigen() {
         return origen;
@@ -48,4 +51,11 @@ public class Viaje {
         this.bus = bus;
     }
 
+    public ILista<Cliente> getClientesEnEspera() {
+        return clientesEnEspera;
+    }
+
+    public void setClientesEnEspera(ILista<Cliente> clientesEnEspera) {
+        this.clientesEnEspera = clientesEnEspera;
+    }
 }

@@ -1,14 +1,15 @@
 package servicios;
 
 import modelos.Empresa;
-import util.ListaEmpresa;
+import util.Lista;
+import util.interfaces.ILista;
 
 public class ServicioEmpresa {
 
-    private ListaEmpresa<Empresa> empresas;
+    private ILista<Empresa> empresas;
 
     public ServicioEmpresa() {
-        this.empresas = new ListaEmpresa<>();
+        this.empresas = new Lista<>();
     }
 
     public String agregarEmpresa(String nit, String nombreEmpresa, double canonArrendamiento, int plazasEstacionamiento) {

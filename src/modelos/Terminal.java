@@ -1,12 +1,13 @@
 package modelos;
 
-import util.ListaUsuario;
+import util.Lista;
+import util.interfaces.ILista;
 
 public class Terminal {
     private int id;
     private String nombre;
     private String ubicacion;
-    private ListaUsuario<Usuario> usuarios;
+    private ILista<Usuario> usuarios;
     private AdministradorTerminal administradorTerminal;
     private Caseta[][] casetas;
 
@@ -14,7 +15,7 @@ public class Terminal {
         this.id = id;
         this.nombre = nombre;
         this.ubicacion = ubicacion;
-        this.usuarios = new ListaUsuario<>();
+        this.usuarios = new Lista<>();
         this.administradorTerminal = new AdministradorTerminal("1111669729", "Luis Sinisterra", "123");
         this.usuarios.add(this.administradorTerminal);
         this.casetas = new Caseta[4][5];
@@ -44,11 +45,11 @@ public class Terminal {
         this.ubicacion = ubicacion;
     }
 
-    public ListaUsuario<Usuario> getUsuarios() {
+    public ILista<Usuario> getUsuarios() {
         return usuarios;
     }
 
-    public void setUsuarios(ListaUsuario<Usuario> usuarios) {
+    public void setUsuarios(ILista<Usuario> usuarios) {
         this.usuarios = usuarios;
     }
 

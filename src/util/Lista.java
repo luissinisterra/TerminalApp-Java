@@ -1,19 +1,18 @@
 package util;
-
 import util.interfaces.ILista;
 
-public class ListaUsuario<S> implements ILista<S> {
+public class Lista<S> implements ILista<S> {
 
-    private NodoUsuario<S> primero;
+    private Nodo<S> primero;
     private int size;
 
     @Override
     public void add(S dato) {
-        NodoUsuario<S> nuevo = new NodoUsuario(dato);
+        Nodo<S> nuevo = new Nodo(dato);
         if (this.primero == null) {
             this.primero = nuevo;
         } else {
-            NodoUsuario<S> aux = this.primero;
+            Nodo<S> aux = this.primero;
             while (aux.siguiente != null) {
                 aux = aux.siguiente;
             }
@@ -29,15 +28,15 @@ public class ListaUsuario<S> implements ILista<S> {
         }
 
         if (index == 0) {
-            return this.primero.usuario;
+            return this.primero.dato;
         } else {
-            NodoUsuario<S> aux = this.primero;
+            Nodo<S> aux = this.primero;
             int contador = 0;
             while (contador < index) {
                 aux = aux.siguiente;
                 contador++;
             }
-            return aux.usuario;
+            return aux.dato;
         }
     }
 
@@ -50,7 +49,7 @@ public class ListaUsuario<S> implements ILista<S> {
         if (index == 0){
             this.primero = this.primero.siguiente;
         } else {
-            NodoUsuario<S> aux = this.primero;
+            Nodo<S> aux = this.primero;
             int contador = 0;
             while (contador < index - 1){
                 aux = aux.siguiente;
@@ -76,3 +75,4 @@ public class ListaUsuario<S> implements ILista<S> {
     }
 
 }
+

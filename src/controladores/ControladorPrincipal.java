@@ -1,12 +1,12 @@
 package controladores;
 
 import modelos.*;
-import util.ListaUsuario;
+import util.interfaces.ILista;
 
 public class ControladorPrincipal {
     private Terminal terminal;
     private Caseta[][] casetas;
-    private ListaUsuario<Usuario> usuarios;
+    private ILista<Usuario> usuarios;
     private AdministradorTerminal administradorTerminal;
 
     public ControladorPrincipal() {
