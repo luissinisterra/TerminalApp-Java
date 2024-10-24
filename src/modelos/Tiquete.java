@@ -1,14 +1,13 @@
 package modelos;
 
 public class Tiquete {
+    private int idTiquete;
     private Viaje viaje;
     private Cliente cliente;
-    private boolean reservado;
 
-    public Tiquete(Viaje viaje, Cliente cliente, boolean reservado) {
+    public Tiquete(Viaje viaje, Cliente cliente) {
         this.viaje = viaje;
         this.cliente = cliente;
-        this.reservado = reservado;
     }
 
     public Viaje getViaje() {
@@ -27,12 +26,5 @@ public class Tiquete {
         this.cliente = cliente;
     }
 
-    public boolean isReservado() {
-        return reservado;
-    }
-
-    public void setReservado(boolean reservado) {
-        this.reservado = reservado;
-    }
 }
 

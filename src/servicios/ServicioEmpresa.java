@@ -12,8 +12,8 @@ public class ServicioEmpresa {
         this.empresas = new Lista<>();
     }
 
-    public String agregarEmpresa(String nit, String nombreEmpresa, double canonArrendamiento, int plazasEstacionamiento) {
-        this.empresas.add(new Empresa(nit, nombreEmpresa, canonArrendamiento, plazasEstacionamiento));
+    public String agregarEmpresa(String nit, String nombreEmpresa) {
+        this.empresas.add(new Empresa(nit, nombreEmpresa));
         return "Empresa agregada con exito";
     }
 
@@ -27,12 +27,10 @@ public class ServicioEmpresa {
         return "Empresa no encontrada";
     }
 
-    public String editarEmpresa(String nit, String nombreEmpresa, double canonArrendamiento, int plazasEstacionamiento) {
+    public String editarEmpresa(String nit, String nombreEmpresa) {
         for (int i = 0; i < this.empresas.size(); i++) {
             if (this.empresas.get(i).getNit().equals(nit)) {
                 this.empresas.get(i).setNombreEmpresa(nombreEmpresa);
-                this.empresas.get(i).setCanonArrendamiento(canonArrendamiento);
-                this.empresas.get(i).setPlazasEstacionamiento(plazasEstacionamiento);
                 return "Empresa actualizada con exito";
             }
         }
